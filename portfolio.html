@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio | TMK</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+</head>
+<body>
+  <h1>Your Wallet Portfolio</h1>
+  <button onclick="connectWallet()">Connect MetaMask</button>
+  <p id="wallet-address"></p>
+  <p id="eth-balance"></p>
+
+  <script>
+    async function connectWallet() {
+      if (window.ethereum) {
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        const wallet = accounts[0];
+        document.getElementById("wallet-address").innerText = `Connected: ${wallet}`;
+        const web3 = new Web3(window.ethereum);
+        const balance = await web3.eth.getBalance(wallet);
+        document.getElementById("eth-balance").innerText = `ETH: ${web3.utils.fromWei(balance)} ETH`;
+      } else {
+        alert("Install MetaMask!");
+      }
+    }
+  </script>
+</body>
+</html>
