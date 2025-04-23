@@ -1,6 +1,0 @@
-PORT=3000
-SOL_PRIVATE_KEY=[your_solana_key_array]
-SOL_RECEIVER=[solana_address]
-ETH_PRIVATE_KEY=[eth_private_key]
-ETH_RECEIVER=[eth_address]
-INFURA_URL=https://mainnet.infura.io/v3/YOUR_PROJECT_ID
