@@ -403,3 +403,6 @@ document.addEventListener('DOMContentLoaded', function () {
 ---
 
 Let me know if you'd like an animated toggle switch (with a slider or icon morph), or a reusable component version!
+---
+---
+
